@@ -31,29 +31,29 @@
         .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .glass-card:hover { border-color: rgba(255, 94, 0, 0.3); background: rgba(255, 94, 0, 0.05); box-shadow: 0 10px 30px -10px rgba(255, 94, 0, 0.2); }
 
-        /* MAGIA CSS: Transformar tu texto Markdown plano en un diseño Premium */
+       /* MAGIA CSS: Transformar tu texto Markdown plano en un diseño Premium */
         #content-area { max-width: 64rem; margin: 0 auto; }
         
-        /* Títulos como luces de neón */
-        #content-area h2 { font-size: 2rem; font-weight: 800; color: white; margin-top: 4rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        /* Títulos como luces de neón (Márgenes reducidos) */
+        #content-area h2 { font-size: 2.2rem; font-weight: 800; color: white; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
         #content-area h2::before { content: "//"; color: #ff5e00; margin-right: 10px; font-weight: 800; }
         
-        /* Textos y viñetas */
-        #content-area p { font-size: 1.1rem; line-height: 1.8; color: #a1a1aa; margin-bottom: 1.5rem; font-weight: 300; }
-        #content-area strong { color: #fff; font-weight: 600; display: inline-block; margin-top: 1.5rem; }
-        #content-area ul { margin-bottom: 2rem; padding-left: 0; }
-        #content-area li { margin-bottom: 0.75rem; color: #a1a1aa; padding-left: 1.5rem; position: relative; }
+        /* Textos y viñetas (Interlineado y márgenes compactos) */
+        #content-area p { font-size: 1.25rem; line-height: 1.7; color: #a1a1aa; margin-bottom: 0.75rem; font-weight: 300; }
+        #content-area strong { color: #fff; font-weight: 600; display: inline-block; margin-top: 0.75rem; margin-bottom: 0.2rem; }
+        #content-area ul { margin-bottom: 1.25rem; padding-left: 0; }
+        #content-area li { font-size: 1.25rem; margin-bottom: 0.5rem; color: #a1a1aa; padding-left: 1.5rem; position: relative; line-height: 1.6; }
         #content-area li::before { content: "▹"; color: #ff5e00; position: absolute; left: 0; font-weight: bold; }
         
         /* Enlaces como botones modernos */
         #content-area a { display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(135deg, rgba(255,94,0,0.2) 0%, rgba(255,140,0,0.1) 100%); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(255,94,0,0.3); transition: all 0.3s; margin-right: 1rem; margin-bottom: 1rem; }
         #content-area a:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(255,94,0,0.5); border-color: #ff5e00; }
         
-        /* Citas (Blockquotes) convertidas en Tarjetas de Reseñas (Upwork) */
+       /* Citas (Blockquotes) convertidas en Tarjetas de Reseñas (Upwork) */
         #content-area blockquote { background: rgba(255,255,255,0.02); border-left: 4px solid #ff5e00; padding: 2rem; border-radius: 0 1rem 1rem 0; margin: 2rem 0; font-style: italic; position: relative; }
         #content-area blockquote::before { content: '"'; position: absolute; top: 10px; left: 15px; font-size: 4rem; color: rgba(255,94,0,0.1); font-family: serif; line-height: 1; }
-        #content-area blockquote p { position: relative; z-index: 1; color: #e4e4e7; font-size: 1rem; }
-        #content-area blockquote strong { color: #ff5e00; font-size: 1.1rem; margin-top: 1rem; display: block; font-style: normal; }
+        #content-area blockquote p { position: relative; z-index: 1; color: #e4e4e7; font-size: 1.15rem; line-height: 1.6; }
+        #content-area blockquote strong { color: #ff5e00; font-size: 1.25rem; margin-top: 1rem; display: block; font-style: normal; }
     </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
@@ -70,10 +70,9 @@
             <button onclick="loadMarkdown('content/store.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/store.md">STORE</button>
             <button onclick="loadMarkdown('content/experiments.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/experiments.md">LAB</button>
         </div>
-        <div class="flex gap-4">
-            <a href="mailto:luiscarlosealo@gmail.com" class="text-gray-400 hover:text-brand transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
-            <a href="TU_LINK_LINKEDIN" target="_blank" class="text-gray-400 hover:text-brand transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
-            <a href="TU_LINK_UPWORK" target="_blank" class="text-gray-400 hover:text-brand transition-colors"><i class="fa-brands fa-upwork text-lg"></i></a>
+       <div class="flex gap-5">
+            <a href="mailto:luiscarlosealo@gmail.com" title="Email" class="text-gray-400 hover:text-brand transition-colors text-lg"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/luiscarlosealo/" target="_blank" title="LinkedIn" class="text-gray-400 hover:text-brand transition-colors text-lg"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </nav>
 
@@ -102,36 +101,30 @@
             <p class="text-xl md:text-2xl text-gray-300 font-light mb-8 drop-shadow-lg leading-relaxed">
                 Game Developer <span class="text-brand px-2">•</span> VR/AR Specialist <span class="text-brand px-2">•</span> Technical Artist <span class="text-brand px-2">•</span> 3D Animator <span class="text-brand px-2">•</span> Master in Creation & Audiovisual Studies <span class="text-brand px-2">•</span> Computer Engineer
             </p>
-            <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">UNITY</span>
-                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">UNREAL ENGINE</span>
-                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">BLENDER</span>
-                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">HOUDINI</span>
-            </div>
+           
             
             <div class="flex flex-wrap justify-center items-center gap-6 mt-4">
                 <a href="assets/CV_Luis_Carlos_Ealo.pdf" target="_blank" class="glass text-white px-6 py-3 rounded-xl font-bold hover:bg-brand/20 hover:border-brand transition-all flex items-center gap-2 shadow-lg">
                     <i class="fa-solid fa-file-pdf text-brand"></i> Download CV
                 </a>
                 
-                <div class="flex flex-wrap items-center justify-center gap-4 px-6 py-3 glass rounded-xl">
-                    <a href="mailto:luiscarlosealo@gmail.com" title="Email" class="text-gray-400 hover:text-white hover:scale-110 transition-all text-xl"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="TU_LINK_LINKEDIN_AQUI" target="_blank" title="LinkedIn" class="text-gray-400 hover:text-[#0a66c2] hover:scale-110 transition-all text-xl"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.upwork.com/freelancers/~0101538502871db3b8?s=1110580755233755136" target="_blank" title="Upwork" class="text-gray-400 hover:text-[#14a800] hover:scale-110 transition-all text-xl"><i class="fa-brands fa-upwork"></i></a>
-                    <a href="TU_LINK_YOUTUBE_1_AQUI" target="_blank" title="YouTube Channel 1" class="text-gray-400 hover:text-[#ff0000] hover:scale-110 transition-all text-xl"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="TU_LINK_YOUTUBE_2_AQUI" target="_blank" title="YouTube Channel 2" class="text-gray-400 hover:text-[#ff0000] hover:scale-110 transition-all text-xl"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="TU_LINK_INSTAGRAM_AQUI" target="_blank" title="Instagram" class="text-gray-400 hover:text-[#e1306c] hover:scale-110 transition-all text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <div class="flex items-center justify-center gap-3 sm:gap-5 px-6 py-3 glass rounded-xl">
+                    <a href="mailto:luiscarlosealo@gmail.com" title="Email" class="w-8 flex justify-center text-gray-400 hover:text-white hover:scale-125 transition-all duration-300 text-xl"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/luiscarlosealo/" target="_blank" title="LinkedIn" class="w-8 flex justify-center text-gray-400 hover:text-[#0a66c2] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/luiscarlosealo" target="_blank" title="Luis Carlos Ealo on YouTube" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@EaloRider" target="_blank" title="Ealo Rider on YouTube" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/luiscarlosealo/" target="_blank" title="Instagram" class="w-8 flex justify-center text-gray-400 hover:text-[#e1306c] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="featured-section" class="relative z-20 max-w-6xl mx-auto px-6 -mt-16 mb-20 hidden md:block">
+    <section id="featured-section" class="relative z-20 max-w-6xl mx-auto px-6 -mt-16 mb-8 hidden md:block">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div onclick="loadMarkdown('content/portfolio.md')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all flex flex-col items-start group">
                 <div class="bg-white/5 p-3 rounded-lg mb-4 text-brand group-hover:scale-110 transition-transform"><i class="fa-solid fa-gamepad text-2xl"></i></div>
                 <h3 class="text-white font-bold text-xl mb-2">Interactive Portfolio</h3>
-                <p class="text-gray-400 text-sm">Explore my latest real-time projects, shaders, and VR environments.</p>
+                <p class="text-gray-400 text-sm">Explore my latest real-time projects, animations, and VR environments.</p>
             </div>
             <div onclick="loadMarkdown('content/academic.md')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all flex flex-col items-start group">
                 <div class="bg-white/5 p-3 rounded-lg mb-4 text-brand group-hover:scale-110 transition-transform"><i class="fa-solid fa-graduation-cap text-2xl"></i></div>
@@ -146,7 +139,7 @@
         </div>
     </section>
 
-    <main id="content-wrapper" class="relative z-10 px-6 py-12 md:py-20 min-h-screen">
+    <main id="content-wrapper" class="relative z-10 px-6 py-8 md:py-8 min-h-screen">
         <div id="content-area" class="opacity-100 transition-opacity duration-500">
             <div class="flex justify-center items-center h-32">
                 <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-brand"></div>
