@@ -1,9 +1,3 @@
-📧 [luiscarlosealo@gmail.com](mailto:luiscarlosealo@gmail.com)
-
-[🔗 Download my CV](https://drive.google.com/file/d/1Fnjo3oVdjaNiXxF_trGY6-O_jORzMx55/view?usp=sharing)
-
-[🌐 Link to my portfolio](#)
-
 ## Professional Profile
 
 Senior Technical Artist and Game Developer with over 25 years of experience in the digital industry, specializing in immersive technologies (VR/AR/XR), 3D animation, and game mechanics. Proven expertise in Unity, Unreal Engine, Maya, and Houdini, with a strong background in technical art, visual effects (VFX), and real-time engines. Fluent in English (C2) and Spanish, I have led creative and technical projects for international clients, blending innovation with production efficiency. Adept at shader development, procedural animation, pipeline integration, and interactive storytelling across platforms. I bring a multidisciplinary perspective that bridges engineering, art, and gameplay.
