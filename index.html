@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Carlos Ealo - Technical Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        dark: '#030303',
+                        brand: '#ff5e00',
+                        brandLight: '#ff8c00'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #030303; color: #d4d4d8; }
+        
+        /* Efecto Glassmorphism ultra-pulido */
+        .glass { background: rgba(20, 20, 20, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-card:hover { border-color: rgba(255, 94, 0, 0.3); background: rgba(255, 94, 0, 0.05); box-shadow: 0 10px 30px -10px rgba(255, 94, 0, 0.2); }
+
+        /* MAGIA CSS: Transformar tu texto Markdown plano en un diseño Premium */
+        #content-area { max-width: 64rem; margin: 0 auto; }
+        
+        /* Títulos como luces de neón */
+        #content-area h2 { font-size: 2rem; font-weight: 800; color: white; margin-top: 4rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        #content-area h2::before { content: "//"; color: #ff5e00; margin-right: 10px; font-weight: 800; }
+        
+        /* Textos y viñetas */
+        #content-area p { font-size: 1.1rem; line-height: 1.8; color: #a1a1aa; margin-bottom: 1.5rem; font-weight: 300; }
+        #content-area strong { color: #fff; font-weight: 600; display: inline-block; margin-top: 1.5rem; }
+        #content-area ul { margin-bottom: 2rem; padding-left: 0; }
+        #content-area li { margin-bottom: 0.75rem; color: #a1a1aa; padding-left: 1.5rem; position: relative; }
+        #content-area li::before { content: "▹"; color: #ff5e00; position: absolute; left: 0; font-weight: bold; }
+        
+        /* Enlaces como botones modernos */
+        #content-area a { display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(135deg, rgba(255,94,0,0.2) 0%, rgba(255,140,0,0.1) 100%); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(255,94,0,0.3); transition: all 0.3s; margin-right: 1rem; margin-bottom: 1rem; }
+        #content-area a:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(255,94,0,0.5); border-color: #ff5e00; }
+        
+        /* Citas (Blockquotes) convertidas en Tarjetas de Reseñas (Upwork) */
+        #content-area blockquote { background: rgba(255,255,255,0.02); border-left: 4px solid #ff5e00; padding: 2rem; border-radius: 0 1rem 1rem 0; margin: 2rem 0; font-style: italic; position: relative; }
+        #content-area blockquote::before { content: '"'; position: absolute; top: 10px; left: 15px; font-size: 4rem; color: rgba(255,94,0,0.1); font-family: serif; line-height: 1; }
+        #content-area blockquote p { position: relative; z-index: 1; color: #e4e4e7; font-size: 1rem; }
+        #content-area blockquote strong { color: #ff5e00; font-size: 1.1rem; margin-top: 1rem; display: block; font-style: normal; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <nav class="hidden md:flex fixed w-full top-0 z-50 glass border-b border-white/5 px-8 py-4 justify-between items-center transition-all duration-300" id="navbar">
+        <div class="flex items-center gap-2">
+            <h1 class="text-2xl font-extrabold text-white tracking-tighter">EALO<span class="text-brand">.</span></h1>
+        </div>
+        <div class="flex gap-6">
+            <button onclick="loadMarkdown('content/home.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/home.md">HOME</button>
+            <button onclick="loadMarkdown('content/portfolio.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/portfolio.md">PORTFOLIO</button>
+            <button onclick="loadMarkdown('content/media.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/media.md">MEDIA</button>
+            <button onclick="loadMarkdown('content/academic.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/academic.md">ACADEMIC</button>
+            <button onclick="loadMarkdown('content/store.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/store.md">STORE</button>
+            <button onclick="loadMarkdown('content/experiments.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/experiments.md">LAB</button>
+        </div>
+        <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-brand transition-colors"><i class="fa-brands fa-artstation text-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+        </div>
+    </nav>
+
+    <nav class="md:hidden fixed bottom-4 left-4 right-4 glass rounded-2xl z-50 shadow-2xl">
+        <div class="grid grid-cols-6 items-center justify-items-center py-3 px-1">
+            <button onclick="loadMarkdown('content/home.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/home.md"><i class="fa-solid fa-house text-lg"></i></button>
+            <button onclick="loadMarkdown('content/portfolio.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/portfolio.md"><i class="fa-solid fa-gamepad text-lg"></i></button>
+            <button onclick="loadMarkdown('content/media.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/media.md"><i class="fa-solid fa-photo-film text-lg"></i></button>
+            <button onclick="loadMarkdown('content/academic.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/academic.md"><i class="fa-solid fa-graduation-cap text-lg"></i></button>
+            <button onclick="loadMarkdown('content/store.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/store.md"><i class="fa-solid fa-store text-lg"></i></button>
+            <button onclick="loadMarkdown('content/experiments.md')" class="flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn" data-file="content/experiments.md"><i class="fa-solid fa-flask text-lg"></i></button>
+        </div>
+    </nav>
+
+    <header id="hero-section" class="relative h-[80vh] flex items-center justify-center overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#030303] z-10"></div>
+        
+       <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-40 mix-blend-screen">
+            <source src="media/UniverzoomTrailer.mp4" type="video/mp4">
+       </video>
+
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16 md:mt-0">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tighter drop-shadow-2xl">
+                Luis Carlos <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brandLight">Ealo.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-8 drop-shadow-lg">
+                Game Developer <span class="text-brand px-2">•</span> VR/AR Specialist <span class="text-brand px-2">•</span> Technical Artist <span class="text-brand px-2">•</span> 3D Animator <span class="text-brand px-2">•</span> Master in Creation & Audiovisual Studies <span class="text-brand px-2">•</span> Computer Engineer
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">UNITY</span>
+                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">UNREAL ENGINE</span>
+                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">BLENDER</span>
+                <span class="glass text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest">HOUDINI</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="featured-section" class="relative z-20 max-w-6xl mx-auto px-6 -mt-16 mb-20 hidden md:block">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div onclick="loadMarkdown('content/portfolio.md')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all flex flex-col items-start group">
+                <div class="bg-white/5 p-3 rounded-lg mb-4 text-brand group-hover:scale-110 transition-transform"><i class="fa-solid fa-gamepad text-2xl"></i></div>
+                <h3 class="text-white font-bold text-xl mb-2">Interactive Portfolio</h3>
+                <p class="text-gray-400 text-sm">Explore my latest real-time projects, shaders, and VR environments.</p>
+            </div>
+            <div onclick="loadMarkdown('content/academic.md')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all flex flex-col items-start group">
+                <div class="bg-white/5 p-3 rounded-lg mb-4 text-brand group-hover:scale-110 transition-transform"><i class="fa-solid fa-graduation-cap text-2xl"></i></div>
+                <h3 class="text-white font-bold text-xl mb-2">Academic Hub</h3>
+                <p class="text-gray-400 text-sm">Access resources, articles, and material from my university courses.</p>
+            </div>
+            <div onclick="loadMarkdown('content/media.md')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all flex flex-col items-start group">
+                <div class="bg-white/5 p-3 rounded-lg mb-4 text-brand group-hover:scale-110 transition-transform"><i class="fa-solid fa-photo-film text-2xl"></i></div>
+                <h3 class="text-white font-bold text-xl mb-2">Public Presence</h3>
+                <p class="text-gray-400 text-sm">Watch interviews, behind-the-scenes, and industry talks.</p>
+            </div>
+        </div>
+    </section>
+
+    <main id="content-wrapper" class="relative z-10 px-6 py-12 md:py-20 min-h-screen">
+        <div id="content-area" class="opacity-100 transition-opacity duration-500">
+            <div class="flex justify-center items-center h-32">
+                <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-brand"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function loadMarkdown(path) {
+            const contentArea = document.getElementById('content-area');
+            const heroSection = document.getElementById('hero-section');
+            const featuredSection = document.getElementById('featured-section');
+            
+            // Efecto visual de transición
+            contentArea.style.opacity = 0;
+            
+            // Lógica para mostrar/ocultar el Video Hero y los Destacados dependiendo del tab
+            if(path.includes('home.md')) {
+                heroSection.style.display = 'flex';
+                featuredSection.style.display = 'block';
+            } else {
+                heroSection.style.display = 'none';
+                featuredSection.style.display = 'none';
+            }
+            
+            // Resaltar botones activos
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if (btn.getAttribute('data-file') === path) {
+                    btn.classList.add('text-brand');
+                    btn.classList.remove('text-gray-400');
+                } else {
+                    btn.classList.remove('text-brand');
+                    btn.classList.add('text-gray-400');
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+                if (btn.getAttribute('data-file') === path) {
+                    btn.classList.add('text-brand');
+                    btn.classList.remove('text-gray-400');
+                } else {
+                    btn.classList.remove('text-brand');
+                    btn.classList.add('text-gray-400');
+                }
+            });
+            
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error('Archivo no encontrado');
+                const text = await response.text();
+                
+                setTimeout(() => {
+                    contentArea.innerHTML = marked.parse(text);
+                    contentArea.style.opacity = 1;
+                    
+                    // Solo hacer scroll hacia arriba si NO estamos en el home
+                    if(!path.includes('home.md')) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, 300);
+            } catch (error) {
+                setTimeout(() => {
+                    contentArea.innerHTML = `<h2 class="text-white font-bold">Contenido en preparación</h2><p>El archivo ${path} se está cargando.</p>`;
+                    contentArea.style.opacity = 1;
+                }, 300);
+            }
+        }
+        
+        // Efecto del menú superior al hacer scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black/80', 'shadow-lg');
+            } else {
+                nav.classList.remove('bg-black/80', 'shadow-lg');
+            }
+        });
+
+        // Carga inicial
+        window.onload = () => loadMarkdown('content/home.md');
+    </script>
+</body>
+</html>
