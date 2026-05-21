@@ -15,7 +15,7 @@
                 extend: {
                     fontFamily: { sans: ['Outfit', 'sans-serif'] },
                     colors: {
-                        dark: '#030303',
+                        dark: '#121212',
                         brand: '#ff5e00',
                         brandLight: '#ff8c00'
                     }
@@ -26,32 +26,25 @@
     <style>
         body { background-color: #121212; color: #d4d4d8; }
         
-        /* Efecto Glassmorphism ultra-pulido */
-        .glass { background: rgba(20, 20, 20, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .glass-card:hover { border-color: rgba(255, 94, 0, 0.3); background: rgba(255, 94, 0, 0.05); box-shadow: 0 10px 30px -10px rgba(255, 94, 0, 0.2); }
+        /* Efecto Glassmorphism */
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.04); }
+        .glass-card { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.04); border-top: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-card:hover { border-color: rgba(255, 94, 0, 0.25); background: rgba(255, 94, 0, 0.03); box-shadow: 0 10px 30px -10px rgba(255, 94, 0, 0.15); }
 
-       /* MAGIA CSS: Transformar tu texto Markdown plano en un diseño Premium */
+        /* Estilos del área de contenido Markdown */
         #content-area { max-width: 64rem; margin: 0 auto; }
         
-        /* Títulos como luces de neón (Márgenes reducidos) */
-        #content-area h2 { font-size: 2.2rem; font-weight: 800; color: #f4f4f5; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        #content-area h2 { font-size: 2.2rem; font-weight: 800; color: #f4f4f5; margin-top: 2.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
         #content-area h2::before { content: "//"; color: #ff5e00; margin-right: 10px; font-weight: 800; }
         
-        /* Textos y viñetas (Interlineado y márgenes compactos) */
         #content-area p { font-size: 1.25rem; line-height: 1.7; color: #b3b3b8; margin-bottom: 0.75rem; font-weight: 300; }
         #content-area strong { color: #fff; font-weight: 600; display: inline-block; margin-top: 0.75rem; margin-bottom: 0.2rem; }
         #content-area ul { margin-bottom: 1.25rem; padding-left: 0; }
         #content-area li { font-size: 1.25rem; margin-bottom: 0.5rem; color: #b3b3b8; padding-left: 1.5rem; position: relative; line-height: 1.6; }
         #content-area li::before { content: "▹"; color: #ff5e00; position: absolute; left: 0; font-weight: bold; }
         
-        /* Enlaces como botones modernos */
-        #content-area a { display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; font-weight: 600; background: linear-gradient(135deg, rgba(255,94,0,0.2) 0%, rgba(255,140,0,0.1) 100%); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(255,94,0,0.3); transition: all 0.3s; margin-right: 1rem; margin-bottom: 1rem; }
-        #content-area a:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(255,94,0,0.5); border-color: #ff5e00; }
-        
-       /* Citas (Blockquotes) convertidas en Tarjetas de Reseñas (Upwork) */
-        #content-area blockquote { background: rgba(255,255,255,0.02); border-left: 4px solid #ff5e00; padding: 2rem; border-radius: 0 1rem 1rem 0; margin: 2rem 0; font-style: italic; position: relative; }
-        #content-area blockquote::before { content: '"'; position: absolute; top: 10px; left: 15px; font-size: 4rem; color: rgba(255,94,0,0.1); font-family: serif; line-height: 1; }
+        #content-area blockquote { background: rgba(255,255,255,0.01); border-left: 4px solid #ff5e00; padding: 2rem; border-radius: 0 1rem 1rem 0; margin: 2rem 0; font-style: italic; position: relative; }
+        #content-area blockquote::before { content: '"'; position: absolute; top: 10px; left: 15px; font-size: 4rem; color: rgba(255,94,0,0.05); font-family: serif; line-height: 1; }
         #content-area blockquote p { position: relative; z-index: 1; color: #e4e4e7; font-size: 1.15rem; line-height: 1.6; }
         #content-area blockquote strong { color: #ff5e00; font-size: 1.25rem; margin-top: 1rem; display: block; font-style: normal; }
     </style>
@@ -102,21 +95,18 @@
                 Game Developer <span class="text-brand px-2">•</span> VR/AR Specialist <span class="text-brand px-2">•</span> Technical Artist <span class="text-brand px-2">•</span> 3D Animator <span class="text-brand px-2">•</span> Master in Creation & Audiovisual Studies <span class="text-brand px-2">•</span> Computer Engineer
             </p>
            
-            
             <div class="flex flex-wrap justify-center items-center gap-6 mt-4">
                 <a href="assets/CV_Luis_Carlos_Ealo.pdf" target="_blank" class="glass text-white px-6 py-3 rounded-xl font-bold hover:bg-brand/20 hover:border-brand transition-all flex items-center gap-2 shadow-lg">
                     <i class="fa-solid fa-file-pdf text-brand"></i> Download CV
                 </a>
                 
                 <div class="flex items-center justify-center gap-3 sm:gap-5 px-6 py-3 glass rounded-xl">
-                <a href="mailto:luiscarlosealo@gmail.com" title="Email" class="w-8 flex justify-center text-gray-400 hover:text-white hover:scale-125 transition-all duration-300 text-xl"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/luiscarlosealo/" target="_blank" title="LinkedIn" class="w-8 flex justify-center text-gray-400 hover:text-[#0a66c2] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-linkedin"></i></a>
-                
-                <a href="https://ealo.artstation.com/" target="_blank" title="ArtStation" class="w-8 flex justify-center text-gray-400 hover:text-[#13aff0] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-artstation"></i></a>
-                
-                <a href="https://www.youtube.com/luiscarlosealo" target="_blank" title="Luis Carlos Ealo on YouTube" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.youtube.com/@EaloRider" target="_blank" title="Ealo Rider on YouTube" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.instagram.com/luiscarlosealo/" target="_blank" title="Instagram" class="w-8 flex justify-center text-gray-400 hover:text-[#e1306c] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:luiscarlosealo@gmail.com" title="Email" class="w-8 flex justify-center text-gray-400 hover:text-white hover:scale-125 transition-all duration-300 text-xl"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/luiscarlosealo/" target="_blank" title="LinkedIn" class="w-8 flex justify-center text-gray-400 hover:text-[#0a66c2] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://ealo.artstation.com/" target="_blank" title="ArtStation" class="w-8 flex justify-center text-gray-400 hover:text-[#13aff0] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-artstation"></i></a>
+                    <a href="https://www.youtube.com/luiscarlosealo" target="_blank" title="YouTube Showcase" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@EaloRider" target="_blank" title="Ealo Rider Vlog" class="w-8 flex justify-center text-gray-400 hover:text-[#ff0000] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/luiscarlosealo/" target="_blank" title="Instagram" class="w-8 flex justify-center text-gray-400 hover:text-[#e1306c] hover:scale-125 transition-all duration-300 text-xl"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -156,10 +146,8 @@
             const heroSection = document.getElementById('hero-section');
             const featuredSection = document.getElementById('featured-section');
             
-            // Efecto visual de transición
             contentArea.style.opacity = 0;
             
-            // Lógica para mostrar/ocultar el Video Hero y los Destacados dependiendo del tab
             if(path.includes('home.md')) {
                 heroSection.style.display = 'flex';
                 featuredSection.style.display = 'block';
@@ -168,25 +156,12 @@
                 featuredSection.style.display = 'none';
             }
             
-            // Resaltar botones activos
             document.querySelectorAll('.nav-btn').forEach(btn => {
-                if (btn.getAttribute('data-file') === path) {
-                    btn.classList.add('text-brand');
-                    btn.classList.remove('text-gray-400');
-                } else {
-                    btn.classList.remove('text-brand');
-                    btn.classList.add('text-gray-400');
-                }
+                btn.className = btn.getAttribute('data-file') === path ? "text-sm font-semibold text-brand transition-colors nav-btn" : "text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn";
             });
 
             document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
-                if (btn.getAttribute('data-file') === path) {
-                    btn.classList.add('text-brand');
-                    btn.classList.remove('text-gray-400');
-                } else {
-                    btn.classList.remove('text-brand');
-                    btn.classList.add('text-gray-400');
-                }
+                btn.className = btn.getAttribute('data-file') === path ? "flex flex-col items-center text-brand transition mobile-nav-btn" : "flex flex-col items-center text-gray-400 hover:text-white transition mobile-nav-btn";
             });
             
             try {
@@ -195,33 +170,110 @@
                 const text = await response.text();
                 
                 setTimeout(() => {
-                    contentArea.innerHTML = marked.parse(text);
-                    contentArea.style.opacity = 1;
+                    const rawHtml = marked.parse(text);
                     
-                    // Solo hacer scroll hacia arriba si NO estamos en el home
+                    if (path.includes('portfolio.md')) {
+                        const parserContainer = document.createElement('div');
+                        parserContainer.innerHTML = rawHtml;
+                        
+                        const finalFragment = document.createDocumentFragment();
+                        const elements = Array.from(parserContainer.children);
+                        
+                        let currentGrid = null;
+                        let currentCard = null;
+                        let linksContainer = null;
+                        
+                        elements.forEach(el => {
+                            if (el.tagName === 'H2') {
+                                finalFragment.appendChild(el);
+                                currentGrid = document.createElement('div');
+                                currentGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-4';
+                                finalFragment.appendChild(currentGrid);
+                            } else if (el.tagName === 'H3') {
+                                currentCard = document.createElement('div');
+                                currentCard.className = 'glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between transition-all duration-300 shadow-xl min-h-[400px]';
+                                
+                                const title = document.createElement('h3');
+                                title.className = 'text-xl font-bold text-white mb-2';
+                                title.innerHTML = el.innerHTML;
+                                currentCard.appendChild(title);
+                                
+                                // FIJADO: Creamos y acoplamos de inmediato el contenedor al fondo de la tarjeta
+                                linksContainer = document.createElement('div');
+                                linksContainer.className = 'flex flex-wrap gap-2 mt-auto pt-4';
+                                currentCard.appendChild(linksContainer);
+                                
+                                if (currentGrid) {
+                                    currentGrid.appendChild(currentCard);
+                                } else {
+                                    currentGrid = document.createElement('div');
+                                    currentGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-4';
+                                    finalFragment.appendChild(currentGrid);
+                                    currentGrid.appendChild(currentCard);
+                                }
+                            } else if (currentCard) {
+                                // 1. Si encuentra una imagen
+                                if (el.querySelector('img') || el.tagName === 'IMG') {
+                                    const img = el.querySelector('img') || el;
+                                    img.className = 'w-full h-52 object-cover rounded-xl my-3 border border-white/10 shadow-inner transition-transform duration-500 hover:scale-[1.02]';
+                                    currentCard.insertBefore(img, linksContainer);
+                                } 
+                                // 2. NUEVO: Si encuentra un video de YouTube (iframe)
+                                else if (el.querySelector('iframe') || el.tagName === 'IFRAME') {
+                                    const iframe = el.querySelector('iframe') || el;
+                                    const videoContainer = document.createElement('div');
+                                    videoContainer.className = 'relative w-full aspect-video rounded-xl overflow-hidden my-3 border border-white/10 shadow-inner';
+                                    iframe.className = 'absolute top-0 left-0 w-full h-full';
+                                    videoContainer.appendChild(iframe);
+                                    currentCard.insertBefore(videoContainer, linksContainer);
+                                }
+                                // 3. Si encuentra botones
+                                else if (el.querySelector('a') || el.tagName === 'A') {
+                                    const links = el.querySelectorAll('a').length ? el.querySelectorAll('a') : [el];
+                                    links.forEach(a => {
+                                        a.target = '_blank';
+                                        const isDownload = a.innerText.toLowerCase().includes('download');
+                                        a.className = isDownload 
+                                            ? 'inline-flex items-center gap-2 text-xs font-bold text-white bg-brand/20 hover:bg-brand/40 border border-brand/50 px-4 py-2 rounded-lg transition-all tracking-wider uppercase'
+                                            : 'inline-flex items-center gap-2 text-xs font-bold text-gray-300 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-lg transition-all tracking-wider uppercase';
+                                        linksContainer.appendChild(a);
+                                    });
+                                } 
+                                // 4. Si es texto normal
+                                else {
+                                    const p = document.createElement('p');
+                                    p.className = 'text-gray-400 text-sm font-light leading-relaxed flex-grow';
+                                    p.innerHTML = el.innerHTML;
+                                    currentCard.insertBefore(p, linksContainer);
+                                }
+                            }
+                        });
+                        
+                        contentArea.innerHTML = '';
+                        contentArea.appendChild(finalFragment);
+                    } else {
+                        contentArea.innerHTML = rawHtml;
+                    }
+                    
+                    contentArea.style.opacity = 1;
                     if(!path.includes('home.md')) {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                 }, 300);
             } catch (error) {
                 setTimeout(() => {
-                    contentArea.innerHTML = `<h2 class="text-white font-bold">Contenido en preparación</h2><p>El archivo ${path} se está cargando.</p>`;
+                    contentArea.innerHTML = `<h2 class="text-white font-bold">Contenido en preparación</h2>`;
                     contentArea.style.opacity = 1;
                 }, 300);
             }
         }
         
-        // Efecto del menú superior al hacer scroll
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-black/80', 'shadow-lg');
-            } else {
-                nav.classList.remove('bg-black/80', 'shadow-lg');
-            }
+            if (window.scrollY > 50) nav.classList.add('bg-black/40', 'shadow-lg');
+            else nav.classList.remove('bg-black/40', 'shadow-lg');
         });
 
-        // Carga inicial
         window.onload = () => loadMarkdown('content/home.md');
     </script>
 </body>
