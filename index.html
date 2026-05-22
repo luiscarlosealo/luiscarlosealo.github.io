@@ -172,7 +172,7 @@
                 setTimeout(() => {
                     const rawHtml = marked.parse(text);
                     
-                    if (path.includes('portfolio.md')) {
+                    if (path.includes('portfolio.md') || path.includes('media.md')) {
                         const parserContainer = document.createElement('div');
                         parserContainer.innerHTML = rawHtml;
                         
@@ -214,15 +214,37 @@
                             } else if (currentCard) {
                                 // 1. Si encuentra una imagen
                                 if (el.querySelector('img') || el.tagName === 'IMG') {
-                                    const img = el.querySelector('img') || el;
-                                    img.className = 'w-full h-52 object-cover rounded-xl my-3 border border-white/10 shadow-inner transition-transform duration-500 hover:scale-[1.02]';
-                                    currentCard.insertBefore(img, linksContainer);
-                                } 
-                                // 2. NUEVO: Si encuentra un video de YouTube (iframe)
+                                    const images = el.tagName === 'IMG' ? [el] : Array.from(el.querySelectorAll('img'));
+                                    images.forEach(img => {
+                                        const isDocument = img.alt.toLowerCase().includes('scan') || img.alt.toLowerCase().includes('documento');
+                                        
+                                        // AHORA: Todas las imágenes mantienen el tamaño estándar de la tarjeta (h-52)
+                                        img.className = 'w-full h-52 object-cover rounded-xl my-3 border border-white/10 shadow-inner transition-all duration-300';
+                                        
+                                        if (isDocument) {
+                                            // Si es un periódico, mostramos la parte superior (object-top) para que se lea el titular en la miniatura
+                                            img.classList.add('object-top', 'hover:opacity-60', 'cursor-zoom-in');
+                                            
+                                            // Al hacer clic, abrimos la ventana flotante
+                                            img.onclick = () => window.openLightbox(img.src);
+                                            currentCard.insertBefore(img, linksContainer);
+                                        } else {
+                                            // Efecto normal para las demás imágenes
+                                            img.classList.add('hover:scale-[1.02]');
+                                            currentCard.insertBefore(img, linksContainer);
+                                        }
+                                    });
+                                }
+                                // 2. Si encuentra YouTube, Instagram o LinkedIn (iframe)
                                 else if (el.querySelector('iframe') || el.tagName === 'IFRAME') {
                                     const iframe = el.querySelector('iframe') || el;
+                                    const isVerticalEmbed = iframe.src.includes('instagram.com') || iframe.src.includes('linkedin.com');
                                     const videoContainer = document.createElement('div');
-                                    videoContainer.className = 'relative w-full aspect-video rounded-xl overflow-hidden my-3 border border-white/10 shadow-inner';
+                                    
+                                    videoContainer.className = isVerticalEmbed 
+                                        ? 'relative w-full h-[600px] rounded-xl overflow-hidden my-3 border border-white/10 shadow-inner bg-white/5'
+                                        : 'relative w-full aspect-video rounded-xl overflow-hidden my-3 border border-white/10 shadow-inner bg-black/50';
+                                        
                                     iframe.className = 'absolute top-0 left-0 w-full h-full';
                                     videoContainer.appendChild(iframe);
                                     currentCard.insertBefore(videoContainer, linksContainer);
@@ -275,6 +297,38 @@
         });
 
         window.onload = () => loadMarkdown('content/home.md');
+
+        // FUNCION PARA CREAR LA VENTANA FLOTANTE (LIGHTBOX)
+        window.openLightbox = function(src) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm opacity-0 transition-opacity duration-300 cursor-zoom-out';
+            
+            // Cerrar al hacer clic en cualquier parte
+            modal.onclick = () => {
+                modal.style.opacity = 0;
+                setTimeout(() => modal.remove(), 300);
+            };
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300';
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '<i class="fa-solid fa-xmark text-3xl"></i>';
+            closeBtn.className = 'absolute top-6 right-6 text-white/70 hover:text-white transition-colors';
+            
+            modal.appendChild(img);
+            modal.appendChild(closeBtn);
+            document.body.appendChild(modal);
+
+            // Animar entrada suave
+            requestAnimationFrame(() => {
+                modal.style.opacity = 1;
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            });
+        };
+
     </script>
 </body>
 </html>
