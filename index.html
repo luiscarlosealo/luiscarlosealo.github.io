@@ -187,11 +187,11 @@
                             if (el.tagName === 'H2') {
                                 finalFragment.appendChild(el);
                                 currentGrid = document.createElement('div');
-                                currentGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-4';
+                                currentGrid.className = 'columns-1 md:columns-2 gap-8 mb-12 mt-4';
                                 finalFragment.appendChild(currentGrid);
                             } else if (el.tagName === 'H3') {
                                 currentCard = document.createElement('div');
-                                currentCard.className = 'glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between transition-all duration-300 shadow-xl min-h-[400px]';
+                                currentCard.className = 'break-inside-avoid mb-8 h-fit glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between transition-all duration-300 shadow-xl min-h-[400px]';
                                 
                                 const title = document.createElement('h3');
                                 title.className = 'text-xl font-bold text-white mb-2';
@@ -207,7 +207,7 @@
                                     currentGrid.appendChild(currentCard);
                                 } else {
                                     currentGrid = document.createElement('div');
-                                    currentGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-4';
+                                    currentGrid.className = 'columns-1 md:columns-2 gap-8 mb-12 mt-4';
                                     finalFragment.appendChild(currentGrid);
                                     currentGrid.appendChild(currentCard);
                                 }
