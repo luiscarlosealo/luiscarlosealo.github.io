@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Carlos Ealo - Technical Artist</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -52,8 +53,8 @@
 <body class="font-sans antialiased overflow-x-hidden">
 
     <nav class="hidden md:flex fixed w-full top-0 z-50 glass border-b border-white/5 px-8 py-4 justify-between items-center transition-all duration-300" id="navbar">
-        <div class="flex items-center gap-2">
-            <h1 class="text-2xl font-extrabold text-white tracking-tighter">EALO<span class="text-brand">.</span></h1>
+       <div class="flex items-center gap-2">
+            <img src="media/EaloLogo.png" alt="Ealo Logo" class="h-8 md:h-10 w-auto drop-shadow-lg cursor-pointer transition-transform hover:scale-105" onclick="loadMarkdown('content/home.md')">
         </div>
         <div class="flex gap-6">
             <button onclick="loadMarkdown('content/home.md')" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors nav-btn" data-file="content/home.md">HOME</button>
@@ -88,6 +89,9 @@
         </video>
 
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16 md:mt-0">
+            
+            <img src="media/profile.jpg" alt="Luis Carlos Ealo" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto mb-6 border-4 border-white/10 shadow-[0_0_40px_rgba(255,94,0,0.2)] transition-transform duration-500 hover:scale-105">
+
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tighter drop-shadow-2xl">
                 Luis Carlos <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brandLight">Ealo.</span>
             </h1>
