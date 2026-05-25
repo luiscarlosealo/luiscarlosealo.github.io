@@ -7,21 +7,10 @@ Ponencia sobre mi trabajo de grado de maestría: "Univerzoom: Una Propuesta Narr
 
 [Watch on YouTube](https://www.youtube.com/watch?v=T2ybrnhKjdc)
 
-### Ecologías Digitales: Presencias y co-creación en la virtualidad
-Academic seminar discussing digital presences and co-creation in virtual environments.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fwN60dTCUwo?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ### Assets Integration for Videogames using Unity Engine
 A deep dive into asset integration pipelines and optimization workflows for video games using Unity.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8SlRvc5nvFE?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-### 9° Ecologías digitales (Session 1)
-First session of the 9th Digital Ecologies seminar focusing on interactive virtual co-creation.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BOP1djdNlfw?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Behind the Scenes & Industry Insights
 
@@ -71,6 +60,15 @@ Information and open registrations for the academic programs and training offere
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7330356479931146241" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
+### Ecologías Digitales: Presencias y co-creación en la virtualidad
+Academic seminar discussing digital presences and co-creation in virtual environments.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fwN60dTCUwo?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 9° Ecologías digitales Press
+9th Digital Ecologies seminar focusing on interactive virtual co-creation.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BOP1djdNlfw?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### My First Entrepreneurship: D3 Interactive
 A look back at my foundational venture in the interactive and 3D development space. As the original web link is no longer available, these scans from the newspaper article provide evidence of our early work.

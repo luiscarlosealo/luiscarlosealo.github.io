@@ -26,4 +26,6 @@ Some of my work as a Technical Artist at PolygonUs. My work in this projects inc
 ### Explore More Work
 Want to explore my complete collection of real-time VFX, 3D animations, Arts, and Multimedia Creations? Visit my official ArtStation profile for detailed technical breakdowns, wireframes, and high-resolution renders.
 
+![ArtStation Portfolio](media/portfoliocollage.png)
+
 [Visit ArtStation Profile](https://ealo.artstation.com/)
