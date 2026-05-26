@@ -174,7 +174,7 @@
                 const text = await response.text();
                 
                 setTimeout(() => {
-                    const rawHtml = marked.parse(text);
+                    const rawHtml = marked.parse(text, { breaks: true });
                     
                     if (path.includes('portfolio.md') || path.includes('media.md') || path.includes('academic.md') || path.includes('store.md') || path.includes('lab.md')) {
                         const parserContainer = document.createElement('div');

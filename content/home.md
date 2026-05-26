@@ -23,7 +23,7 @@ English (C2), Spanish (Native), German (Basic)
 
 **Master Degree in Creation and Audiovisual Studies**
 Universidad de Antioquia
-Research: Univerzoom – Augmented Reality Game for Scientific Communication (Cum Laude)
+Research: Univerzoom – Augmented Reality Game for Scientific Communication (Cum Laude Distintion)
 
 **Computer Engineer**
 Universidad de Medellín
