@@ -21,6 +21,13 @@ Some of my work as a Technical Artist at PolygonUs. My work in this projects inc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4ePD8apeZhc?modestbranding=1&rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### KFC Roblox Experience: Interactive Hub & Minigames
+Developed a branded Roblox experience designed to drive player retention. Features an expansive hub world with hidden collectibles and three distinct playable modes: Football, Obstacle Course (Obby), and a Cooking Simulator.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-eMxNHhHk0E?si=hvDFJ3zmF0eG1Eub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ## Full Gallery
 
 ### Explore More Work
